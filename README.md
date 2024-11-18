@@ -8,5 +8,6 @@
 ## Baixando Arquivos Grandes
 Este repositório utiliza Git LFS para gerenciar arquivos grandes. Para acessar o arquivo `basegoverno.csv`, certifique-se de ter o Git LFS instalado e execute:
 
-``git lfs install
-  git lfs pull``
+`git lfs install` 
+
+ `git lfs pull`
