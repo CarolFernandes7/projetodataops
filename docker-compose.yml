@@ -3,19 +3,15 @@ version: '3.8'
 services:
   streamlit_app:
     build:
-      context: .
+      context: .  # Caminho para o diretório do Dockerfile
       dockerfile: Dockerfile
     ports:
-      - "8501:8501"
+      - "8501:8501"  # Mapeia a porta 8501 do contêiner para a porta 8501 da máquina
     volumes:
-      - "./app:/app"  # Monta o diretório 'app' local para '/app' no contêiner
-      - "teste2_baseDB:/data"  # Usa o volume Docker existente 'teste2_baseDB' em '/data' no contêiner
+      - "./app:/app"  # Monta o diretório local 'app' para '/app' no contêiner
     environment:
-      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
-      - STREAMLIT_SERVER_PORT=8501
-      - STREAMLIT_SERVER_ENABLE_CORS=false
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0  # Permite acesso de fora do contêiner
+      - STREAMLIT_SERVER_PORT=8501  # Porta do Streamlit
+      - STREAMLIT_SERVER_ENABLE_CORS=false  # Desabilita o CORS
+      - MONGO_URI=mongodb+srv://ahylm09x2:4KabHKiKXRLQqXhT@cluster0.ds4xg.mongodb.net/newbase?retryWrites=true&w=majority  # URI de conexão com o MongoDB Atlas
     restart: always
-
-volumes:
-  teste2_baseDB:
-    external: true
