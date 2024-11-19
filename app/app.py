@@ -15,15 +15,15 @@ client = MongoClient(mongo_uri, ssl=True)
 db = client["newbase"]  # Nome do banco de dados: "newbase"
 
 # Listar coleções no banco de dados 'newbase'
-#colecoes = db.list_collection_names()
-#st.write("Coleções disponíveis no banco de dados 'newbase':", colecoes)
+colecoes = db.list_collection_names()
+st.write("Coleções disponíveis no banco de dados 'newbase':", colecoes)
 
 # Acessando a coleção 'Base'
 collection = db["Base"]  # Nome da coleção: "Base"
 
 # Verifica o número de documentos na coleção
 count = collection.count_documents({})
-#st.write(f"Total de documentos na coleção: {count}")
+st.write(f"Total de documentos na coleção: {count}")
 
 # Caso a coleção esteja vazia
 if count == 0:
