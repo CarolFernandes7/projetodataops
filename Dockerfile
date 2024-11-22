@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar o arquivo app.py e outros arquivos Python (se houver) para o contêiner
+# Copiar o arquivo app.py
 COPY app/app.py .
 
 # Expor a porta usada pelo Streamlit
