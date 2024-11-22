@@ -123,8 +123,6 @@ Esse repositório utiliza uma base do governo que está localizada dentro de um 
    CMD ["streamlit", "run", "/app/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.enableCORS=false"]
    ```
 
----
-
 ## Requirements
 
 - **streamlit**: Para criar a interface interativa da aplicação.
@@ -132,6 +130,66 @@ Esse repositório utiliza uma base do governo que está localizada dentro de um 
 - **numpy**: Para cálculos numéricos eficientes.
 - **plotly**: Para criar gráficos interativos.
 - **pymongo**: Para conectar e interagir com o banco de dados MongoDB. 
+
+## config.toml
+
+### **1. Configuração do Servidor (`[server]`)**
+
+#### **Parâmetros:**
+- **`maxMessageSize`**:  
+  Define o tamanho máximo permitido para mensagens enviadas pelo cliente (em bytes). No exemplo, está configurado para **500 bytes**, limitando a quantidade de dados enviados por requisição.
+
+- **`headless`**:  
+  Indica se o Streamlit deve ser executado sem abrir automaticamente o navegador.  
+  - **`true`**: Não abre o navegador ao iniciar a aplicação.
+
+- **`enableCORS`**:  
+  Controla a política de compartilhamento de recursos entre origens diferentes (CORS).  
+  - **`false`**: Desativa CORS, permitindo que a aplicação seja acessada de diferentes domínios.
+
+- **`enableWebsocketCompression`**:  
+  Habilita ou desabilita a compressão de dados transmitidos via WebSocket.  
+  - **`false`**: Desativa a compressão, útil se houver problemas de compatibilidade com alguns navegadores.
+
+- **`address`**:  
+  Especifica o endereço IP onde o servidor estará escutando conexões.  
+  - **`0.0.0.0`**: Permite conexões de qualquer endereço IP, facilitando o acesso externo à aplicação.
+
+- **`port`**:  
+  Define a porta onde a aplicação será servida.  
+  - **`8501`**: Padrão do Streamlit.
+
+### **2. Configuração de Tema (`[theme]`)**
+
+#### **Parâmetros:**
+- **`base`**:  
+  Define o tema base para a interface.  
+  - **`dark`**: Utiliza um tema escuro como padrão.
+
+- **`primaryColor`**:  
+  Cor principal usada para botões e elementos interativos.  
+  - No exemplo, é **`#1f77b4`** (um azul suave).
+
+- **`backgroundColor`**:  
+  Cor de fundo principal da aplicação.  
+  - Aqui está configurado como **`#0e1117`** (um tom escuro, quase preto).
+
+- **`secondaryBackgroundColor`**:  
+  Cor de fundo secundária, usada em caixas, painéis ou elementos destacados.  
+  - Configurada como **`#262730`** (um cinza escuro).
+
+- **`textColor`**:  
+  Define a cor do texto exibido na interface.  
+  - Configurada como **`#FAFAFA`** (um branco claro).
+
+### **Resumo das Funcionalidades**
+
+1. **Configurações de Servidor:**
+   - Garante que a aplicação Streamlit esteja acessível remotamente.
+   - Ajusta permissões de acesso, como CORS e WebSocket, para maior flexibilidade.
+
+2. **Configurações de Tema:**
+   - Personaliza a aparência para criar uma interface mais agradável e de fácil leitura, especialmente em ambientes com pouca iluminação (tema escuro).
 
 
 ### Como Usar
