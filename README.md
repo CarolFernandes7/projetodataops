@@ -3,6 +3,8 @@
 
 ### Análise de uso com base no "([Cartão de Pagamento do Governo Federal (CPGF)](https://basedosdados.org/dataset/10e96562-3b2a-44e2-b6f9-0472f80993df?table=0e5aff23-79f2-4f52-9c19-bbca1a4232a0))"
 
+Este projeto consiste na análise dos dados de uso do cartão corporativo do governo federal brasileiro no período de janeiro de 2013 a agosto de 2024. O objetivo é investigar padrões de gastos, identificar áreas de maior consumo e detectar possíveis irregularidades, proporcionando uma visão abrangente sobre a utilização dos recursos públicos. Além disso, analisaremos os diferentes governos compreendidos nesse período para compreender como cada administração utilizou os recursos. Os dados primários utilizados são da Controladoria Geral da União, extraídos a partir do site Base dos Dados. Através da aplicação de técnicas de análise de dados e visualização, buscamos fornecer insights relevantes que possam contribuir para a transparência e a eficiência na gestão dos recursos públicos.
+
 ## Repositório e arquivos.
 Esse repositório utiliza uma base do governo que está localizada dentro de um Atlas do MongoDB, com isso seu acesso é feito via ssh utilizando o MongodbCompass para subir o arquivo e gerenciar o reposítorio localmente na máquina windows.
 
