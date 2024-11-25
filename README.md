@@ -194,17 +194,11 @@ Esse repositório utiliza uma base do governo que está localizada dentro de um 
 
 ### Como Usar
 
-1. **Construir a Imagem Docker**  
+1. **Executar o Contêiner**  
    ```bash
-   docker build -t streamlit-app .
-   ```
+   docker-compose up -d
 
-2. **Executar o Contêiner**  
-   ```bash
-   docker run -p 8501:8501 streamlit-app
-   ```
-
-3. **Acessar o Aplicativo**  
+2. **Acessar o Aplicativo**  
    Abra no navegador:  
    ```
    http://localhost:8501
